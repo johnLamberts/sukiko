@@ -1,4 +1,24 @@
-{
-  "extends": "./tsconfig",
-  "exclude": ["src/__tests__/", "**/*.test.ts", "**/*.mock.ts"]
+"compilerOptions": {
+  "outDir": "dist",
+  "sourceMap": true,
+  "target": "esnext",
+  "module": "commonjs",
+  "esModuleInterop": true,
+  "forceConsistentCasingInFileNames": true,
+  "noImplicitAny": true,
+  "strict": true,
+  "skipLibCheck": true,
+  "lib": ["dom", "esnext"],
+  "allowJs": true,
+  "rootDir": ".",
+  "removeComments": true,
+  "moduleResolution": "node",
+  "baseUrl": "./",
+  "paths": {
+    "@/*": ["src/*"]
+  },
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true
+},
+"exclude": ["node_modules", "dist", "coverage"]
 }
